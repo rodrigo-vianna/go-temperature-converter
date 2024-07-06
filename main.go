@@ -41,15 +41,15 @@ func main() {
 
 	// Convert the temperature
 	var result float64
-	var resultUnit string
+	var resultUnit rune
 	if toKelvin {
 		result = convertCelsiusToKelvin(temperature)
-		resultUnit = "K"
+		resultUnit = 'K'
 	} else {
 		result = convertKelvinToCelsius(temperature)
-		resultUnit = "C"
+		resultUnit = 'C'
 	}
 
 	// Print the result
-	fmt.Printf("Temperature: %.2f %s\n", result, resultUnit)
+	fmt.Printf("Temperature: %.2f %c\n", result, resultUnit)
 }
